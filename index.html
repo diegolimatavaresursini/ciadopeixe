@@ -6,13 +6,13 @@
     <title>Cia do Peixe - Qualidade e Sabor em Frutos do Mar</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=8UD1DG5P5ciJ&format=png&color=000000" type="image/x-icon">
 </head>
-<body>
+<body id="topo">
     <header>
         <nav class="navbar">
             <div class="container">
-                <a href="#" class="logo">
+                <a href="#home" class="logo">
                     <img src="cia.jpeg" alt="Cia do Peixe Logo">
                 </a>
                 <ul class="nav-links">
@@ -53,22 +53,27 @@
         </section>
 
         <section id="localizacao" class="section-localizacao">
-            <div class="container">
-                <h2>Onde nos encontrar</h2>
-                <img src="local.png"width="400"
+            <iframe
+                            width="600"
                             height="450"
                             style="border:0;"
                             loading="lazy"
-                            allowfullscreen>
+                            allowfullscreen
+                           src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJy0mN4gT-rZQRyL-M9f5oH0U&key=SUA_CHAVE_API_GOOGLE_AQUI">
                         </iframe>
+            <div class="container">
+                <h2>Onde nos encontrar</h2>
+                <img src="local.png" width="400"
+                            height="450"
+                            style="border:0;"
+                            loading="lazy" />
                         </div>
-                    <div class="address-info">
-                        <p>Rua das Ostras, 123 - Centro</p>
-                        <p>Florianópolis, SC</p>
-                        <p>Brasil</p>
-                        <p>Telefone: (48) 99932-0849</p>
+                        <section id="contato" class="section-contato">
+                        <p>Rua das Ostras, 123 - Centro - Florianópolis, SC - Brasil <br> Telefone: (48) 99932-0849</p>
+                        
+                        </section>
                     </div>
-                </div>
+                
             </div>
         </section>
     </main>
@@ -78,15 +83,12 @@
             <p>&copy; 2023 Cia do Peixe. Todos os direitos reservados.</p>
         </div>
     </footer>
-      <div id="botao-voltar">
-        <a href="#home"><i class="bi bi-arrow-up-square-fill"></i></a>
+      
+     <script src="script.js"></script>
+    <a href="https://wa.me/554899320849" class="whatsapp-fixo" target="_blank">📱 WhatsApp</a>
+<a href="#topo" class="voltar-fixo">🔝 Topo</a>
+    <div id="botao-voltar">
+        <a href="#topo"><i class="bi bi-arrow-up-square-fill"></i></a>
      </div>
- 
-  <div class="fixed-bottom-bar">
-        <a href="https://wa.me/554899320849" target="_blank">
-        <img src="https://logospng.org/download/whatsapp/logo-whatsapp-verde-icone-ios-android-1024.png" alt="botao-whatsapp" width="50" height="50">
-        </a>
-  </div>
-    <script src="script.js"></script>
 </body>
 </html>
