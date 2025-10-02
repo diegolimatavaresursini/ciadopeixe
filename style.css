@@ -1,271 +1,269 @@
 :root {
-    --primary-color: #3f88c5; /* Azul da logo */
-    --secondary-color: #6aabcb; /* Azul mais claro */
-    --text-color: #333;
-    --light-text-color: #f8f8f8;
-    --background-light: #f4f4f4;
-    --background-dark: #333;
+  --primary-color: #3f88c5;
+  --secondary-color: #6aabcb;
+  --text-color: #333;
+  --light-text-color: #f8f8f8;
+  --background-light: #f4f4f4;
+  --background-dark: #333;
 }
 
-/* Estilos Globais */
+/* Reset e base */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-    line-height: 1.6;
-    background-color: #ffffff; /* Fundo branco para a página */
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: #ffffff;
+  line-height: 1.6;
 }
 
+/* Container padrão */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-h1, h2, h3 {
-    font-weight: 700;
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Header e Navegação */
+/* Navbar com logo ampliada */
 .navbar {
-    background-color: #ffffff; /* Fundo branco para a barra de navegação */
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar .logo img {
-    height: 500px; /* Ajuste o tamanho da logo */
+  height: 200px;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
 }
 
+/* Navegação */
 .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: 700;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
-/* Hero Banner */
+/* Banner principal */
 .hero-banner {
-    background: url('ponte-hercilio-luz.jpg') no-repeat center center/cover;
-    color: var(--light-text-color);
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-    z-index: 1; /* Para garantir que o texto fique acima do overlay */
+  background: url('ponte-hercilio-luz.jpg') no-repeat center center/cover;
+  color: var(--light-text-color);
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
 }
 
-.hero-banner::before { /* Overlay escuro para melhorar a leitura do texto */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Preto com 40% de opacidade */
-    z-index: -1; /* Abaixo do conteúdo do banner */
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
 
 .hero-banner h1 {
-    font-family: 'Great Vibes', cursive; /* Para um estilo elegante como a logo */
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    color: var(--light-text-color);
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5em;
+  margin-bottom: 10px;
 }
 
 .hero-banner p {
-    font-size: 1.3em;
-    max-width: 700px;
-    margin: 0 auto;
-    color: var(--light-text-color);
+  font-size: 1.3em;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-/* Seção de Produtos */
+/* Produtos */
 .section-produtos {
-    padding: 60px 0;
-    background-color: var(--background-light);
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #e0f7fa, #fffde7);
+  text-align: center;
+}
+
+.section-produtos h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #00695c;
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
 .product-item {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
 .product-item:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .product-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-bottom: 1px solid #eee;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
 }
 
 .product-item h3 {
-    font-size: 1.6em;
-    margin: 20px 0 10px;
-    color: var(--primary-color);
+  font-size: 1.5em;
+  color: #00796b;
+  margin: 20px 0 10px;
 }
 
 .product-item p {
-    font-size: 1em;
-    color: var(--text-color);
-    padding: 0 20px 20px;
+  font-size: 1em;
+  color: #555;
+  padding: 0 20px 20px;
 }
 
-/* Seção de Localização */
+/* Localização */
 .section-localizacao {
-    padding: 60px 0;
-    background-color: #ffffff;
+  padding: 60px 20px;
+  background-color: #ffffff;
 }
 
 .location-content {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
 }
 
 .map-container {
-    flex: 2; /* O mapa ocupa mais espaço */
-    min-width: 300px; /* Largura mínima para o mapa */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 2;
+  min-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .map-container iframe {
-    width: 100%;
-    height: 400px; /* Altura do mapa */
-    display: block; /* Remove espaço extra abaixo do iframe */
+  width: 100%;
+  height: 400px;
+  display: block;
 }
 
 .address-info {
-    flex: 1; /* As informações de endereço ocupam menos espaço */
-    min-width: 250px; /* Largura mínima para o endereço */
-    background-color: var(--background-light);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 250px;
+  background-color: var(--background-light);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .address-info p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    line-height: 1.5;
-    color: var(--text-color);
+  font-size: 1.1em;
+  margin-bottom: 10px;
 }
 
-.fixed-bottom-ba {
-    display: inline-flex;
-    align-items: center;
-    background-color: #25d366; /* Cor do WhatsApp */
-    color: white;
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1em;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+/* Botões flutuantes fixos na tela */
+.whatsapp-fixo,
+.voltar-fixo {
+  position: fixed;
+  bottom: 20px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1em;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.whatsapp-button:hover {
-    background-color: #1da851;
-    transform: translateY(-2px);
+.whatsapp-fixo {
+  left: 20px;
+  background-color: #25d366;
+  color: white;
 }
 
-.whatsapp-button img {
-    height: 24px;
-    margin-right: 10px;
+.whatsapp-fixo:hover {
+  background-color: #1da851;
 }
 
-/* Footer */
+.voltar-fixo {
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.voltar-fixo:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Rodapé */
 footer {
-    background-color: var(--background-dark);
-    color: var(--light-text-color);
-    text-align: center;
-    padding: 25px 0;
-    margin-top: 50px;
+  background-color: var(--background-dark);
+  color: var(--light-text-color);
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
 }
 
 footer p {
-    margin: 0;
-    font-size: 0.9em;
+  margin: 0;
+  font-size: 0.9em;
 }
 
-/* Responsividade Básica (para telas menores) */
+/* Responsivo */
 @media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-    }
-    .navbar .nav-links {
-        margin-top: 15px;
-    }
-    .nav-links li {
-        margin: 0 15px;
-    }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .hero-banner h1 {
-        font-size: 2.5em;
-    }
-    .hero-banner p {
-        font-size: 1.1em;
-    }
+  .nav-links {
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
 
-    .product-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
-    }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .location-content {
-        flex-direction: column; /* Pilha vertical em telas pequenas */
-        align-items: center;
-    }
+  .location-content {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .map-container, .address-info {
-        width: 100%; /* Ocupa a largura total */
-        min-width: unset;
-    }
-    .map-container iframe {
-        height: 300px; /* Ajusta a altura do mapa */
-    }
+  .map-container iframe {
+    height: 300px;
+  }
 }
